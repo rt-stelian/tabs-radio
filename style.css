@@ -192,7 +192,7 @@ body {
   border: 2px solid #aeaeae;
   border-radius: 5px;
   padding: 20px;
-  height: 300px;
+  min-height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,6 +219,7 @@ body {
   opacity: 0;
   display: none;
 }
+
 .cards__form {
   width: 100%;
   display: grid;
@@ -346,4 +347,56 @@ body {
 }
 .cards__card_notosans::after {
   background-color: rgb(16, 56, 112);
+}
+
+/*======================================================*/
+/*===========================MediaQ=====================*/
+/*======================================================*/
+@media screen and (max-width: 480px) {
+  .cards__form {
+    grid-template-columns: auto;
+  }
+  .cards__card_merriweather, .cards__card_roboto, .cards__card_notosans {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    grid-column: 1;
+  }
+  .cards__card_merriweather input, .cards__card_roboto input, .cards__card_notosans input {
+    width: 0;
+  }
+  .cards__card_merriweather h2, .cards__card_roboto h2, .cards__card_notosans h2 {
+    width: 60%;
+    text-align: left;
+  }
+  .cards__card_merriweather::before, .cards__card_roboto::before, .cards__card_notosans::before {
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
+  .cards__card_merriweather::after, .cards__card_roboto::after, .cards__card_notosans::after {
+    left: 6px;
+    top: 6px;
+    width: 71px;
+    height: 71px;
+    border-radius: 5px;
+  }
+  .cards__card_merriweather {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    grid-row: 1;
+  }
+  .cards__card_roboto {
+    grid-row: 2;
+  }
+  .cards__card_notosans {
+    grid-row: 3;
+    margin-bottom: 20px;
+  }
 }
