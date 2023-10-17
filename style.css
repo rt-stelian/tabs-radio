@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+/* Reset CSS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  line-height: 1;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* Reset CSS end*/
+/*======================================================*/
+body {
+  font-family: Montserrat;
+  font-weight: 600;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  width: 600px;
+}
+
+.tabs {
+  text-align: right;
+}
+
+.tabs__button {
+  padding: 20px;
+  font-family: Montserrat;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #aeaeae;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.tabs__button:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #000;
+}
+.tabs__button.active {
+  color: rgb(211, 35, 0);
+}
+.tabs__button:not(:first-child) {
+  position: relative;
+}
+.tabs__button:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 50%;
+  width: 1px;
+  background-color: rgb(169, 169, 169);
+}
+
+.tab-content {
+  border: 2px solid #aeaeae;
+  border-radius: 5px;
+  padding: 20px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tab-content__text, .tab-content__cards {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.tab-content__text {
+  opacity: 0;
+  display: none;
+}
+.cards__form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px;
+}
+.cards__form span {
+  position: relative;
+}
+.cards__form span::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -20px;
+}
+.cards__form label {
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.cards__form label.checked {
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.cards__card_merriweather, .cards__card_roboto, .cards__card_notosans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.cards__card_merriweather input, .cards__card_roboto input, .cards__card_notosans input {
+  margin-bottom: 50px;
+  visibility: hidden;
+  position: relative;
+}
+.cards__card_merriweather h2, .cards__card_roboto h2, .cards__card_notosans h2 {
+  width: 70%;
+  line-height: 150%;
+}
+.cards__card_merriweather {
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-row: 1/7;
+  grid-column: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.cards__card_merriweather::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 0;
+  width: 140px;
+  height: 140px;
+  border: 2px solid #000;
+  border-radius: 15px;
+}
+.cards__card_merriweather::after {
+  content: "";
+  position: absolute;
+  left: 23px;
+  top: 7px;
+  width: 130px;
+  height: 130px;
+  border-radius: 10px;
+  background-color: rgb(3, 148, 44);
+}
+.cards__card_roboto, .cards__card_notosans {
+  position: relative;
+}
+.cards__card_roboto::before, .cards__card_notosans::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.cards__card_roboto::after, .cards__card_notosans::after {
+  content: "";
+  position: absolute;
+  left: -44px;
+  top: 6px;
+  width: 71px;
+  height: 71px;
+  border-radius: 5px;
+}
+.cards__card_roboto input, .cards__card_notosans input {
+  width: 30%;
+}
+.cards__card_roboto {
+  grid-row: 1/4;
+  grid-column: 3;
+}
+.cards__card_roboto::after {
+  background-color: rgb(222, 83, 106);
+}
+.cards__card_notosans {
+  grid-column: 3;
+  grid-row: 4/7;
+}
+.cards__card_notosans::after {
+  background-color: rgb(16, 56, 112);
+}

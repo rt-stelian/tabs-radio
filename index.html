@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Tabs / RadioCards</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <button class="tabs__button" data-tab="tab-1">my fonts</button>
+        <button class="tabs__button active" data-tab="tab-2">buy fonts</button>
+      </div>
+      <div class="tab-content">
+        <div class="tab-content__text" id="tab-1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum velit
+          quia soluta quibusdam, doloremque nam ea molestiae ducimus repudiandae
+          blanditiis! Nisi, explicabo ipsam! Numquam enim ipsum cum nulla nemo
+          officia!
+        </div>
+        <div class="tab-content__cards cards" id="tab-2">
+          <form action="#" class="cards__form">
+            <label class="cards__card_merriweather">
+              <input type="radio" name="select" />
+              <h2><span>Merriweather</span> project is led by Sorkin Type</h2>
+            </label>
+            <label class="cards__card_roboto">
+              <input type="radio" name="select" />
+              <h2><span>Roboto</span> doesn't compromise, allowing letters</h2>
+            </label>
+            <label class="cards__card_notosans">
+              <input type="radio" name="select" />
+              <h2><span>Noto</span> Sans covers over 30 scripts</h2>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
